@@ -1,0 +1,231 @@
+\documentclass[17pt]{beamer}
+%\pagenumbering{1,2,3}
+\definecolor{green1}{RGB}{0,128,64}
+\definecolor{green}{RGB}{0,128,0}
+\setbeamercolor{structure}{fg=green1}
+%\newenvironment{bl%ucmd}[1]
+% change the alerted colour to red
+%\definecolor{yellow}{RGB}{255,128,64}
+\setbeamercolor{alerted text}{fg=green}
+%\newcommand{\bluecmd}[1]{\color{blue}\begin{verbatim}#1\end{verbatim}}}
+
+% theme split
+\usepackage{verbatim}
+\newenvironment{colorverbatim}[1][]%
+{%
+\color{blue}
+\verbatim
+}%
+{%
+\endverbatim
+}%
+%\usepackage{beamerthemesplit}
+%\usepackage{watermark}
+\usepackage{graphicx}
+%\usepackage{type1cm}
+\usepackage{eso-pic}
+% theme shadow
+%\usepackage{beamerthemeshadow}
+\beamertemplateshadingbackground{blue!5}{yellow!10}
+%\mode<presentation>{\usebackgroundtemplate{\includegraphics[width=\paperwidth]{watermark.PNG}}} 
+\usepackage{beamerthemesplit}
+
+% logo
+\logo{\includegraphics[height=1cm]{3t-logo.pdf}}
+
+\begin{document}
+% sf family, bold font
+\sffamily \bfseries
+
+%\LARGE
+\title
+[BASH Shell Scripting \hspace{1cm}
+\insertframenumber/\inserttotalframenumber]
+{Introduction to BASH Shell Scripting}
+\author
+[Script: Ranjith, Sachin  Narration: Sachin]
+{{\small Talk to a Teacher Project \\ {\color{blue}
+    http://spoken-tutorial.org} \\
+National Mission on Education through ICT \\
+{\color{blue}http://www.sakshat.ac.in}}\\
+{\scriptsize Script:}  \small Ranjith \& Sachin \\ 
+{\scriptsize Narration:} \small Sachin\\ 
+{\today}}
+
+\begin{frame}
+   \titlepage
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Learning Objectives}
+  \begin{itemize}[<+-|alert@+>]
+  \item Bash shell
+  \item Bash shell script
+  \item Simple shell script and execute it
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{System Requirements}
+  \begin{itemize}[<+-|alert@+>]
+  \item Ubuntu 10.10 
+  \item GNU bash version 4.1.10  
+  \item Bash version 4 or above
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Prerequisite}
+  \begin{itemize}[<+-|alert@+>]
+  \item Basic knowledge of Linux Operating System
+  %% \item Listen to spoken tutorial on "Basic of Shell Scripting"
+  \item available at http://spoken-tutorial.org
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Bash Shell} \pause
+  \begin{itemize}[<+-|alert@+>]
+  \item Bash Shell is a Command language interpreter that executes commands  
+  \item Commands are read from the standard input device
+  \item It can be your keyboard or from a file
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Bash Shell Script} \pause
+  \begin{itemize}[<+-|alert@+>]
+  \item Series of Bash commands written sequentially in plain text file
+  \item Tells the shell to execute this text file instead of entering
+    the commands
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{A Procedure to Write Scripts} \pause
+  \begin{itemize}[<+-|alert@+>]
+  \item test a command in a terminal \\
+    {\tt echo "Hello World"} 
+  \item It worked as expected 
+  \item We may want to use this command again 
+    %\item We do not have to type it again \pause
+  \item We can put it in a file and execute 
+    %\item Let us illustrate by using this command we saw just now
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Summary}
+  \begin{itemize}[<+-|alert@+>]
+  \item Bash shell 
+  \item Bash shell script 
+  \item Simple shell script 
+  \item Execute a script
+  \end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+  \frametitle{Assignment}
+  \begin{itemize}[<+-|alert@+>]
+  \item Write shell script: {\tt my-name.sh}
+  \item Print your name
+  \item Execute it
+  \end{itemize}
+\end{frame}
+
+%% \begin{frame}
+%%   \frametitle{About the Spoken Tutorial Project}
+%%   \begin{itemize}[<+-|alert@+>]
+%%   \item The video available at, {\color{blue} http://spoken-tutorial.org
+%%     /What\_is\_a\_Spoken\_Tutorial}
+%%   \item Summarises the Spoken Tutorial project
+%%   \item If you do not have good bandwidth, you can download \\ and watch
+%%     it
+%%   \end{itemize}
+%% \end{frame}
+
+%% \begin{frame}
+%%   \frametitle{About the Spoken Tutorial Project}
+%% The Spoken Tutorial Project Team
+%%   \begin{itemize}[<+-|alert@+>]
+%% \item Conducts workshops using spoken tutorials
+%% \item Gives certificates to those who pass an online test
+%% \item For more details, contact sptutemail@gmail.com
+%%   \end{itemize}
+%% \end{frame}
+
+%% \begin{frame}
+%%   \frametitle{Acknowledgement}
+%%   \begin{itemize}[<+-|alert@+>]
+%%   \item Spoken Tutorial Project is a part of the Talk to a Teacher
+%%     project,
+%%   \item supported by the National Mission on Education through ICT,
+%%     MHRD, Government of India
+%%   \end{itemize}
+%% \end{frame}
+
+%% \begin{frame}
+%%   \frametitle{Acknowledgement}
+%%   This project is co-ordinated by,
+%%   \begin{itemize}[<+-|alert@+>]
+%%   \item {\color{blue}http://spoken-tutorial.org}
+%%   \item  More information on the same is available at,
+%%   \item {\color{blue} http://spoken-tutorial.org /NMEICT-Intro}
+%%   \end{itemize}
+%% \end{frame}
+
+%% \begin{frame}
+%%   \frametitle{About the contributor}
+%%   IIT Bombay
+%%   \begin{itemize}[<+-|alert@+>]
+%%   \item Ranjith \& Sachin 
+%%   \item This is Sachin signing off 
+%%   \item Thanks for joining
+%%   \end{itemize}
+%% \end{frame}
+
+%% --------------------------------------------------
+
+\begin{frame}
+  \frametitle{About the Spoken Tutorial Project}
+  \begin{itemize}
+  \item Watch the video available at {\color{blue}
+    http://spoken-tutorial.org /What\_is\_a\_Spoken\_Tutorial}
+  \item It summarises the Spoken Tutorial project \pause
+  \item If you do not have good bandwidth, you can download and watch it
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Spoken Tutorial Workshops}
+  The Spoken Tutorial Project Team
+  \begin{itemize}
+  \item Conducts workshops using spoken tutorials
+  \item Gives certificates to those who pass an online test
+  \item For more details, contact sptutemail@gmail.com
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Acknowledgements}
+  \begin{itemize}
+  \item Spoken Tutorial Project is a part of the Talk to a Teacher
+    project
+  \item It is supported by the National Mission on Education through
+    ICT, MHRD, Government of India.
+  \item More information on this Mission is available at \\
+    \small {\color{blue} http://spoken-tutorial.org/NMEICT-Intro}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{About the contributor}
+  IIT Bombay
+  \begin{itemize}[<+-|alert@+>]
+  \item Ranjith \& Sachin 
+  \item This is Sachin signing off 
+  \item Thanks for joining
+  \end{itemize}
+\end{frame}
+
+\end{document}

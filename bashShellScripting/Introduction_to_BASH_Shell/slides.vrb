@@ -1,0 +1,6 @@
+\frametitle {Assignment}
+  \begin{itemize}[<+-|alert@+>]
+  \item Write shell script: {\tt my-name.sh}
+  \item Print your name
+  \item Execute it
+  \end{itemize}
